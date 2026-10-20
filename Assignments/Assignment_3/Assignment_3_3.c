@@ -1,0 +1,74 @@
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  3. Write a program which accepts a number from the user and prints
+//     the even factors of that number.
+//
+//  Function Name : DisplayEvenFactor
+//  Input         : Integer
+//  Output        : Even factors of the given number
+//  Description   : This function displays all even factors of a number.
+//
+//  Date          : 20/10/2026
+//  Author        : Shekhar Nannaware
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+#include<stdlib.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : DisplayEvenFactor
+//  Input         : Integer
+//  Output        : Prints even factors of the given number
+//
+////////////////////////////////////////////////////////////////////////////////
+
+void DisplayEvenFactor(int iNo)
+{
+    int i = 0;
+
+    if(iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    for(i = 1; i < iNo; i++)
+    {
+        if((iNo % i == 0) && (i % 2 == 0))
+        {
+            printf("%d\t", i);
+        }
+    }
+
+    printf("\n");
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter Number:\n");
+    scanf("%d", &iValue);
+
+    DisplayEvenFactor(iValue);
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Step 5: Test the program
+//
+//  Test Case 1:
+//  Input  : 36
+//  Output : 2	4	6	12	18
+//
+////////////////////////////////////////////////////////////////////////////////

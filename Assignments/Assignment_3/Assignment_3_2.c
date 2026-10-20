@@ -1,0 +1,74 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  2. Write a program which accepts a number from the user and prints
+//     the factors of that number.
+//
+//  Function Name : DisplayFactor
+//  Input         : Integer
+//  Output        : Factors of the given number
+//  Description   : This function displays the factors of a number.
+//
+//  Date          : 20/10/2026
+//  Author        : Shekhar Nannaware
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+#include<stdlib.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : DisplayFactor
+//  Input         : Integer
+//  Output        : Prints factors of the given number
+//
+////////////////////////////////////////////////////////////////////////////////
+
+void DisplayFactor(int iNo)
+{
+    int i = 0;
+
+    if(iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    for(i = 1; i < iNo; i++)
+    {
+        if(iNo % i == 0)
+        {
+            printf("%d\t", i);
+        }
+    }
+
+    printf("\n");
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter Number:\n");
+    scanf("%d", &iValue);
+
+    DisplayFactor(iValue);
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Step 5: Test the program
+//
+//  Test Case 1:
+//  Input  : 24
+//  Output : 1  2  3  4  6  8  12
+//
+////////////////////////////////////////////////////////////////////////////////
+

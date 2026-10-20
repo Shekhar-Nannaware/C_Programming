@@ -1,0 +1,71 @@
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  4. Accept one character from the user and convert its case.
+//
+//  Function Name : DisplayConvert
+//  Input         : Character
+//  Output        : Converted character
+//  Description   : Converts uppercase to lowercase and lowercase to uppercase.
+//
+//  Date          : 20/10/2026
+//  Author        : Shekhar Nannaware
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+#include<stdlib.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : DisplayConvert
+//  Input         : Character
+//  Output        : Prints the converted character
+//
+////////////////////////////////////////////////////////////////////////////////
+
+void DisplayConvert(char cValue)
+{
+    if(cValue >= 'A' && cValue <= 'Z')
+    {
+        cValue = cValue + 32;
+        printf("%c\n", cValue);
+    }
+    else if(cValue >= 'a' && cValue <= 'z')
+    {
+        cValue = cValue - 32;
+        printf("%c\n", cValue);
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char cValue = '\0';
+
+    printf("Enter Character:\n");
+    scanf("%c", &cValue);
+
+    DisplayConvert(cValue);
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Step 5: Test the program
+//
+//  Test Case 1:
+//  Input  : A
+//  Output : a
+//
+//  Test Case 2:
+//  Input  : b
+//  Output : B
+//
+////////////////////////////////////////////////////////////////////////////////
